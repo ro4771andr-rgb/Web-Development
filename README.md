@@ -6,7 +6,7 @@ This repository contains the implementation of software design patterns, full-st
 
 | Component | Link |
 | :--- | :--- |
-| **Frontend** | [View](https://smarthome-two-pi.vercel.app) |
+| **Frontend** | [View](smarthome-two-pi.vercel.app) |
 | **Backend API** | [View](https://web-development-s80u.onrender.com/docs) |
 | **CI/CD** | [View](https://github.com/ro4771andr-rgb/Web-Development/actions) |
 
