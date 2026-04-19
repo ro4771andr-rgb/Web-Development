@@ -65,10 +65,10 @@ const DashboardPage = () => {
   const [homes, setHomes] = useState([]);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/homes')
+    fetch('https://web-development-s80u.onrender.com/homes')
       .then(res => res.json())
       .then(data => setHomes(data))
-      .catch(err => console.error("Error"));
+      .catch(err => console.error("Error fetching homes:", err));
   }, []);
 
   return (
