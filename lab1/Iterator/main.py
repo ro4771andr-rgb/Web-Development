@@ -41,13 +41,12 @@ class WordsCollection(Aggregate):
     def add_item(self, item: Any):
         self._collection.append(item)
 
-if __name__ == "__main__":
-    collection = WordsCollection()
-    collection.add_item("First")
-    collection.add_item("Second")
-    collection.add_item("Third")
+collection = WordsCollection()
+collection.add_item("First")
+collection.add_item("Second")
+collection.add_item("Third")
 
-    iterator = collection.create_iterator()
+iterator = collection.create_iterator()
 
-    while iterator.has_next():
-        print(next(iterator))
+while iterator.has_next():
+    print(next(iterator))

@@ -42,18 +42,17 @@ class Directory(FileSystemComponent):
             total += child.get_size()
         return round(total, 2)
 
-if __name__ == "__main__":
-    file1 = File("main.py", 12.5)
-    file2 = File("utils.py", 4.2)
-    file3 = File("config.json", 1.0)
+file1 = File("main.py", 12.5)
+file2 = File("utils.py", 4.2)
+file3 = File("config.json", 1.0)
 
-    root = Directory("Project_Root")
-    src = Directory("src")
+root = Directory("Project_Root")
+src = Directory("src")
     
-    src.add(file1)
-    src.add(file2)
+src.add(file1)
+src.add(file2)
 
-    root.add(src)
-    root.add(file3)
+root.add(src)
+root.add(file3)
 
-    root.show_details()
+root.show_details()

@@ -56,9 +56,8 @@ def client_service(factory: FurnitureFactory):
     print(chair.sit_on())
     print(sofa.lie_on())
 
-if __name__ == "__main__":
-    print("--- Client orders Modern furniture ---")
-    client_service(ModernFurnitureFactory())
+print("--- Client orders Modern furniture ---")
+client_service(ModernFurnitureFactory())
 
-    print("\n--- Client orders Victorian furniture ---")
-    client_service(VictorianFurnitureFactory())
+print("\n--- Client orders Victorian furniture ---")
+client_service(VictorianFurnitureFactory())
