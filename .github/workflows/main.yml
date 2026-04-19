@@ -1,0 +1,26 @@
+name: SmartHome CI
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install uv
+          uv pip install --system fastapi uvicorn pytest pytest-asyncio pytest-cov httpx 
+
+      - name: Run Lab 4 Tests with Coverage
+        run: |
+          export PYTHONPATH=$PYTHONPATH:$(pwd)
+          cd lab4
+          pytest --cov=../lab2/main test_main.py
